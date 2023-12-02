@@ -1,0 +1,402 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'K2D', 'sans-serif';
+    font-weight: 100;
+}
+header nav img{
+    width: 200px;
+}
+#active{
+    font-weight: 600;
+    color: rgb(224, 195, 46);
+}
+section{
+    padding: 5rem 60px;
+}
+section > h1{
+    font-size: 36px;
+}
+section > h1, section > h3{
+    color: rgb(31, 70, 118);
+}
+.parent_section{
+    padding: 0 60px;
+    background-image: linear-gradient(30deg, rgb(49, 111, 155),  rgba(0, 0, 0, 0.454)), url('../assets/img/cover1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.tourParent{
+    background-image: linear-gradient(30deg, rgb(49, 111, 155),  rgba(0, 0, 0, 0.454)), url('../assets/img/cover2.jpg');
+}
+.cover_section header nav ul{
+    position: relative;
+    float: right;
+}
+.cover_section header nav ul li{
+    list-style: none;
+    float: left;
+    margin: 0 30px;
+}
+.cover_section header nav ul li a{
+    
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+}
+.mainDesc{
+    width: 50rem;
+}
+.cover_section > div h1{
+    font-weight: 400;
+    color: white;
+    font-size: 36px;
+}
+.cover_section > div p{
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+}
+.cover_section > div button{
+    position: relative;
+    font-size: 16px;
+    color: rgb(31, 70, 118);
+    height: 50px;
+    width: auto;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: rgb(245, 219, 87);;
+}
+.flexThree{
+    margin-top: 7rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    display: flex;
+    color: white;
+}
+.stepsThree span{
+    width: auto;
+    padding: 3px;
+    color: rgb(31, 70, 118);
+    height: auto;
+    background-color: white;
+}
+.flexCards{
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+}
+.flexCards .card{
+    background-image: linear-gradient(30deg, rgb(49, 111, 155),  rgba(0, 0, 0, 0.454));
+    border-radius: 18px;
+    position: relative;
+    width: 25em;
+    height: 20rem;
+}
+.flexCards .card #adDesc{
+    font-size: 14px;
+    bottom: 2rem;
+}
+.flexCards .card h3{
+    top: 9rem;
+}
+.flexCards .card hr{
+    width: 5rem;
+    bottom: 8rem;
+}
+.flexCards .card h3, .flexCards .card p, .flexCards .card hr{
+    margin:0;
+    left: 1rem;
+    font-size: 22px;
+    color: white;
+    position: absolute;
+}
+.flexCards .card p{
+    font-size: 14px;
+    bottom: 5rem;
+}
+.flexCards .card img{
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 23px;
+}
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flexBox{
+    color: rgb(31, 70, 118);
+    font-size: 22px;
+    width: 100%;
+    display: flex;
+    gap: 10rem;
+}
+.first_card{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    gap: 3rem;
+}
+.flexBox hr{
+    width: 20rem;
+    margin:0;
+}
+.flexBox .first_card img{
+    height: 30rem;
+    width: 30rem;
+    display: inline-block;
+}
+.flexBox h3 i, .childFlex h3 i{
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #ffd43b;
+}
+.childFlex{
+    display: flex;
+    gap: 3rem;
+}
+#centeredSection{
+    text-align: center;
+}
+.galleryTable{
+    position: relative;
+    text-align: start;
+    justify-content: space-between;
+    display: grid;
+    gap: 3rem;
+    grid: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 20rem);
+}
+.galleryTable h3, .galleryTable p, .galleryTable hr{
+    left: 1rem;
+    color: white;
+    font-size: 22px;
+    position: absolute;
+}
+.galleryTable .card{
+    background-image: linear-gradient(30deg, rgb(49, 111, 155),  rgba(0, 0, 0, 0.454));
+    position: relative;
+}
+.galleryTable .card:hover{
+    background-color: linear-gradient(30deg, rgb(0, 0, 0, 0) rgba(0, 0, 0, 0)454);
+    transition: 10ms;
+}
+.galleryTable .card h3{
+    bottom: 7rem;
+}
+.galleryTable .card p{
+    font-size: 22px;
+    bottom: 3rem;
+}
+.galleryTable .card hr{
+    font-size: 22px;
+    bottom: 6rem;
+    color: white;
+    width: 5rem;
+}
+.galleryTable .b{
+    grid-column: span 2;
+}
+.galleryTable .card img{
+    z-index: -1;
+    position: relative;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+footer{
+    padding-top: 4rem;
+    align-items: center;
+    background-color: #004158;
+    width: 100%;
+    display: flex;
+    color: white;
+    font-size: 15px;
+    justify-content: space-around;
+}
+
+footer .companyInfo{
+    width: 20rem;
+}
+footer .social nav ul{
+    margin: 0;
+    left: 0;
+    position: absolute;
+}
+
+footer nav ul li, footer .social li{
+    float: left;
+    list-style: none;
+    margin: 0 10px;
+}
+footer nav ul a {
+    text-decoration: none;
+    color: white
+}
+footer nav ul li a, footer .social li a{
+    font-size: 15px;
+    text-decoration: none;
+}
+#desired{
+    display: inline;
+}
+.searchInput{
+    float: right;
+    width: 20rem;
+    padding: 10px;
+}
+.filter{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+input{
+    border: none;
+    filter: drop-shadow(2px 2px 2px #979797);
+    border-radius: 12px;
+}
+.filter select{
+    border-radius: 12px;
+    width: 10rem;
+    padding: 10px;
+    border: none;
+    filter: drop-shadow(2px 2px 2px #979797);
+}
+.filter select option{
+    height: 20rem;
+    padding: 10px;
+}
+.flexSection{
+    gap: 2rem;
+}
+.flexSection img{
+    margin-top: 2rem;
+    width: 20rem;
+    border: 4px solid #ffd43b;
+}
+.blogFlex{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.blogFlex .blogCard{
+    font-size: 22px;
+    filter: drop-shadow(12px 12px 12px #979797);
+}
+.blogFlex .blogCard > div{
+    position: absolute;
+    top:0;
+    background-color: #004158;
+    color: white;
+    right: 0;
+}
+.blogFlex hr{
+    width: 100%;
+}
+.blogFlex .blogCard span{
+    font-weight: 600;
+}
+.blogFlex .blogCard > div p{
+    font-size: 19px;
+    margin: 0;
+}
+.blogFlex .blogCard img{
+    border-radius: 18px;
+    margin-right: 3rem;
+    width: 20rem;
+    height: 20rem;
+    float: left;
+}
+.blogFlex .blogCard #author{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+.mainDesc div{
+    display: flex;
+    flex-direction: column;
+}
+.mainDesc div p{
+    font-size: 22px;
+}
+.mainDesc div p i{
+    font-size: 30px;
+}
+.contactForm{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    gap: 3rem;
+    padding: 5rem 60px;
+    background-image: linear-gradient(30deg, rgb(49, 111, 155),  rgba(0, 0, 0, 0.454)), url('../assets/img/blog1.jpg');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.contactForm .fillForm{
+    width: 30rem;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contactForm .fillForm button{
+    width: 20rem;
+    height: 3rem;
+    background-color: #ffd43b;
+    border: none;
+    border-radius: 18px;
+    font-size: 22px;
+    color: #004258;
+    font-weight: 600;
+}
+.contactForm .fillForm input{
+    width: 20rem;
+    height: 3rem;
+}
+.contactForm .fillForm textarea{
+    border-radius: 18px;
+    width: 20rem;
+    height: 20rem;
+}
+.contactForm .map{
+    width: 30rem;
+    height: 30rem;
+    background-image: url('../assets/img/map.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 10px solid #ffd43b;
+}
+@media screen and (max-width: 1270px) {
+    .flexCards{
+        gap: 2rem;
+    }
+    .flexBox .first_card {
+        flex-direction: column-reverse;
+    }
+    .flexBox .reverse{
+        flex-direction: column;
+    }
+    .flexBox .first_card img{
+        width: 100%;
+        object-fit: cover;
+    }
+  }
