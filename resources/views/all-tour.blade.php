@@ -8,13 +8,29 @@
 </head>
 <body>
     <div class="heading">
+        <a style="text-decoration: none;" href="/tour/all">
         <h1>Tour table</h1>
+        </a>
+        <div class="filter">
+        <form action="{{ route('tours.all') }}">
+            <tr>
+                <td><input type="number" name="id" value="{{ $filters['id'] }}" placeholder="ID"></td>
+                <td colspan="2"><input type="text" value="{{ $filters['tourname'] }}"  name="tourname" placeholder="Enter the Tour name"></td>
+                <td><input type="number" name="day" placeholder="Enter the number of day" value="{{ $filters['day'] }}"></td>
+                <td><input type="number" name="min_price" placeholder="Enter the min price" value="{{ $filters['min_price'] }}"></td>
+                <td><input type="number" name="max_price" placeholder="Enter the max price" value="{{ $filters['max_price'] }}"></td>
+                <td><button class="btn btn-success" type="submit">Search</button></td>
+            </tr>
+        </form>
+</div>
     </div>
+    
     <div class="outer-wrapper">
     <div class="table-wrapper">
     <form action="/tour/add" method="POST" enctype="multipart/form-data">
     @csrf
     <table>
+        </form>
         <thead>
             <th>Date Added</th>
             <th>Name</th>
@@ -55,7 +71,7 @@
             <th>Actions</th>
         </thead>
         <tr>
-            <form action="/tour/add" method="POST">
+            <form action="{{ route('tours.add') }}" method="POST">
             @csrf
                 <td></td>
                 <td><input type="text" name="tourname" placeholder="Tour name"></td>
@@ -102,7 +118,7 @@
             <tr>
                 <td>{{$tr->created_at}}</td>
                 <td>{{$tr->tourname}}</td>
-                <td>{{$tr->tourdescription}}</td>
+                <td><pre>{{$tr->tourdescription}}</pre></td>
                 <td>{{$tr->tourprice}}</td>
                 <td>{{$tr->day}}</td>
                 <td><img width=100px height="100px" src="/storage/tour/{{$tr->image1}}" alt=""></td>
@@ -111,37 +127,38 @@
                 <td><img width=100px height="100px" src="/storage/tour/{{$tr->image4}}" alt=""></td>
                 <td><img width=100px height="100px" src="/storage/tour/{{$tr->image5}}" alt=""></td>
                 <td>{{$tr->locationone}}</td>
-                <td>{{$tr->dayonedesc}}</td>
+                <td><pre>{{$tr->dayonedesc}}</pre></td>
                 <td>{{$tr->locationtwo}}</td>
-                <td>{{$tr->daytwodesc}}</td>
+                <td><pre>{{$tr->daytwodesc}}</pre></td>
                 <td>{{$tr->locationthree}}</td>
-                <td>{{$tr->daythreedesc}}</td>
+                <td><pre>{{$tr->daythreedesc}}</pre></td>
                 <td>{{$tr->locationfour}}</td>
-                <td>{{$tr->dayfourdesc}}</td>
+                <td><pre>{{$tr->dayfourdesc}}</pre></td>
                 <td>{{$tr->locationfive}}</td>
-                <td>{{$tr->dayfivedesc}}</td>
+                <td><pre>{{$tr->dayfivedesc}}</pre></td>
                 <td>{{$tr->locationsix}}</td>
-                <td>{{$tr->daysixdesc}}</td>
+                <td><pre>{{$tr->daysixdesc}}</pre></td>
                 <td>{{$tr->locationseven}}</td>
-                <td>{{$tr->daysevendesc}}</td>
+                <td><pre>{{$tr->daysevendesc}}</pre></td>
                 <td>{{$tr->locationeight}}</td>
-                <td>{{$tr->dayeightdesc}}</td>
+                <td><pre>{{$tr->dayeightdesc}}</pre></td>
                 <td>{{$tr->locationnine}}</td>
-                <td>{{$tr->dayninedesc}}</td>
+                <td><pre>{{$tr->dayninedesc}}</pre></td>
                 <td>{{$tr->locationten}}</td>
-                <td>{{$tr->daytendesc}}</td>
+                <td><pre>{{$tr->daytendesc}}</pre></td>
                 <td>{{$tr->locationeleven}}</td>
-                <td>{{$tr->dayelevendesc}}</td>
+                <td><pre>{{$tr->dayelevendesc}}</pre></td>
                 <td>{{$tr->locationtwelve}}</td>
-                <td>{{$tr->daytwelvedesc}}</td>
+                <td><pre>{{$tr->daytwelvedesc}}</pre></td>
                 <td>{{$tr->locationthirteen}}</td>
-                <td>{{$tr->daythirteendesc}}</td>
+                <td><pre>{{$tr->daythirteendesc}}</pre></td>
                 <td>
-                    <form action="/tour/delete" method="POST">
+                    <form action="{{ route('tours.delete') }}" method="POST">
                     @csrf
                         <input type="hidden" name="tour_id" value="{{ $tr->id }}" />
                         <button class="btn btn-danger">Delete</button>
                     </form>
+                    <a href="/tour/edit/{{ $tr->id}}" class="btn btn-primary">Edit</a>
                     
                 </td>
                 
