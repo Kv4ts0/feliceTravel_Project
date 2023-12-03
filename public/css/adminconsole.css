@@ -31,6 +31,21 @@ th{
     overflow-y: scroll;
     margin: 20px;
 }
+.btn{
+    border: none;
+    border-radius: 13px;
+    width: 100px;
+    color: white;
+    height: 30px;
+    
+}
+.btn-danger{
+    background-color: rgb(255, 107, 107);
+}
+.btn-success{
+    color: black;
+    background-color: rgb(119, 255, 107);
+}
 .outer-wrapper{
     margin: 10px;
     margin-left: 20px;

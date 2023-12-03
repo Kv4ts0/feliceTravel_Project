@@ -18,6 +18,13 @@ class TourController extends Controller
     public function getBlogPage(){
         return view("blog");
     }
+    public function viewAllTour(){
+        $tours = Tour::orderBy('created_at', 'DESC')->get();
+        return view('all-tour')->with('tours', $tours);
+    }
+    public function editTour(){
+
+    }
     public function addNewTour(Request $request){
         $tour = New Tour();
         $tour->tourname = $request->tourname;
@@ -73,8 +80,8 @@ class TourController extends Controller
         $tour->save();
         return redirect('/tour/all');
     }
-    public function viewAllTour(){
-        $tours = Tour::orderBy('created_at', 'DESC')->get();
-        return view('all-tour')->with('tours', $tours);
+    public function deleteTour(Request $request){
+        Tour::where('id', $request->tour_id)->delete();
+        return redirect('/tour/all');
     }
 }

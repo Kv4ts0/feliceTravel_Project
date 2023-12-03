@@ -52,8 +52,11 @@
             <th>Day Twelve Description</th>
             <th>Locations of Thirteenth day</th>
             <th>Day Thirteen Description</th>
+            <th>Actions</th>
         </thead>
         <tr>
+            <form action="/tour/add" method="POST">
+            @csrf
                 <td></td>
                 <td><input type="text" name="tourname" placeholder="Tour name"></td>
                 <td><textarea name="tourdescription" placeholder="Tour description"></textarea></td>
@@ -90,8 +93,10 @@
                 <td><textarea name="daytwelvedesc" placeholder="Description of twelfth day" >N/A</textarea></td>
                 <td><input type="text" name="locationthirteen" placeholder="Location of thirteenth day" value="N/A"></td>
                 <td><textarea name="daythirteendesc" placeholder="Description of thirteenth day" >N/A</textarea></td>  
-                <td><button type="submit">Add</button></td>
+                <td><button class="btn btn-success" type="submit">Add</button></td>
+                <td>#</td>
             </tr>
+            </form>
         @foreach($tours as $tr)
         <tbody>
             <tr>
@@ -131,7 +136,14 @@
                 <td>{{$tr->daytwelvedesc}}</td>
                 <td>{{$tr->locationthirteen}}</td>
                 <td>{{$tr->daythirteendesc}}</td>
-
+                <td>
+                    <form action="/tour/delete" method="POST">
+                    @csrf
+                        <input type="hidden" name="tour_id" value="{{ $tr->id }}" />
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                    
+                </td>
                 
 
             </tr>
