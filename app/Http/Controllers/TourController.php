@@ -5,11 +5,10 @@ use App\Models\Tour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class TourController extends Controller
 {
-    public function getHomePage(){
-        return view("index");
-    }
+
     public function getTourPage(){
         return view("tours");
     }
@@ -19,7 +18,7 @@ class TourController extends Controller
     public function getBlogPage(){
         return view("blog");
     }
-    public function viewAllTour(Request $request){
+    public function getFilteredTours(Request $request){
         $tours = Tour::orderBy('created_at', 'DESC');
         if($request->id != null){
             $tours->where('id', $request->id);
@@ -36,7 +35,11 @@ class TourController extends Controller
         if($request->day != null){
             $tours->where('day', '=', $request->day);
         }
-        $tours = $tours->get();
+        return $tours->get();
+
+    }
+    public function viewAllTour(Request $request){
+        $tours = $this->getFilteredTours($request);
         return view('all-tour')->with('tours', $tours)->with('filters', [
             'id' => $request->id,
             'tourname' => $request->tourname,
@@ -168,5 +171,15 @@ class TourController extends Controller
     public function deleteTour(Request $request){
         Tour::where('id', $request->tour_id)->delete();
         return redirect()->route('tours.all');
+    }
+    public function getHomePage(Request $request){
+        $tours = $this->getFilteredTours($request);
+        return view("index")->with('tours', $tours)->with('filters', [
+            'id' => $request->id,
+            'tourname' => $request->tourname,
+            'min_price' => $request->min_price,
+            'max_price' => $request->max_price,
+            'day' => $request->day,
+        ]);
     }
 }

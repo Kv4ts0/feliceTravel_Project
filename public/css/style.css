@@ -99,12 +99,10 @@ section > h1, section > h3{
     height: 20rem;
 }
 .flexCards .card #adDesc{
-    font-size: 14px;
+    font-size: 16px;
     bottom: 2rem;
 }
-.flexCards .card h3{
-    top: 9rem;
-}
+
 .flexCards .card hr{
     width: 5rem;
     bottom: 8rem;
@@ -116,11 +114,24 @@ section > h1, section > h3{
     color: white;
     position: absolute;
 }
+.flexCards .card h3{
+    font-size: 20px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top: 9rem;
+}
 .flexCards .card p{
-    font-size: 14px;
+    font-size: 16px;
     bottom: 5rem;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .flexCards .card img{
+    object-fit: cover;
     position: relative;
     z-index: -1;
     width: 100%;

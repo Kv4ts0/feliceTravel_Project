@@ -56,34 +56,15 @@
         <h3>Where to go:</h3>
         <h1>Popular Destinations</h1>
         <div class="flexCards">
+            @foreach($tours as $tr)
             <div class="card">
-                <h3>Kazbegi</h3>
+                <h3>{{ $tr->tourname}}</h3>
                 <hr />
-                <p><i class="fa-solid fa-location-dot" style="color: #ffd43b;"></i> Gergeti</p>
-                <p id="adDesc">245 want to travel here</p>
-                <img src="./assets/img/gergeti.jpg" alt="Card1 Image">
+                <p><i class="fa-solid fa-coins" style="color: #ffd43b;"></i> {{ $tr->tourprice}} $</p>
+                <p id="adDesc">{{ $tr->locationone}}, {{ $tr->locationtwo}}</p>
+                <img src="storage/tour/{{$tr->image1}}" alt="Card1 Image">
             </div>
-            <div class="card">
-                <h3>Batumi</h3>
-                <hr />
-                <p><i class="fa-solid fa-location-dot" style="color: #ffd43b;"></i> Botanical garden</p>
-                <p id="adDesc">215 want to travel here</p>
-                <img src="./assets/img/botanic garden.jpg" alt="Card1 Image">
-            </div>
-            <div class="card">
-                <h3>Martvili</h3>
-                <hr />
-                <p><i class="fa-solid fa-location-dot" style="color: #ffd43b;"></i> Martvili canyon</p>
-                <p id="adDesc">195 want to travel here</p>
-                <img src="./assets/img/martvili canyon.jpg" alt="Card1 Image">
-            </div>
-            <div class="card">
-                <h3>Bakuriani</h3>
-                <hr />
-                <p><i class="fa-solid fa-location-dot" style="color: #ffd43b;"></i> Didveli</p>
-                <p id="adDesc">176 want to travel here</p>
-                <img src="./assets/img/bakuriani.jpg" alt="Card1 Image">
-            </div>
+            @endforeach
         </div>
     </section>
     <section>
