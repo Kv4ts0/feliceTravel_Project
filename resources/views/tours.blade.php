@@ -56,69 +56,67 @@
 <section>
     <h3>Where to go:</h3>
     <h1 id="desired">Your desired destination</h1>
-    <input class="searchInput" type="text" placeholder="Search">
+    <form action="{{ route('tourshome.all') }}">
+        <input class="searchInput" type="text" name="tourname" value="{{$filters['tourname']}}" placeholder="Search">
+    </form>
+    <form action="{{ route('tourshome.all') }}">
+    
     <div class="filter">
         <select name="locations" id="locations" value="Locations">
             <option value="" disabled selected hidden>Locations</option>
             <option value="Georgia">Georgia</option>
             <option value="saab">Saab</option>
         </select>
-        <select name="days" id="days">
+        <select name="day" id="day">
             <option value="" disabled selected hidden>Days</option>
-            <option value="1 Day">1 Day</option>
-            <option value="2 Day">2 Day</option>
-            <option value="3 Day">3 Day</option>
-            <option value="4 Day">4 Day</option>
-            <option value="5 Day">5 Day</option>
-            <option value="6 Day">6 Day</option>
-            <option value="7 Day">7 Day</option>
-            <option value="8 Day">8 Day</option>
-            <option value="9 Day">9 Day</option>
-            <option value="10 Day">10 Day</option>
-            <option value="11 Day">11 Day</option>
-            <option value="12 Day">12 Day</option>
-            <option value="14 Day">14 Day</option>
+            <option value="{{ implode(['day' => '1']) }}">1 Day</option>
+            <option value="{{ implode(['day' => '2']) }}">2 Day</option>
+            <option value="{{ implode(['day' => '3']) }}">3 Day</option>
+            <option value="{{ implode(['day' => '4']) }}">4 Day</option>
+            <option value="{{ implode(['day' => '5']) }}">5 Day</option>
+            <option value="{{ implode(['day' => '6']) }}">6 Day</option>
+            <option value="{{ implode(['day' => '7']) }}">7 Day</option>
+            <option value="{{ implode(['day' => '8']) }}">8 Day</option>
+            <option value="{{ implode(['day' => '9']) }}">9 Day</option>
+            <option value="{{ implode(['day' => '10']) }}">10 Day</option>
+            <option value="{{ implode(['day' => '11']) }}">11 Day</option>
+            <option value="{{ implode(['day' => '12']) }}">12 Day</option>
+            <option value="{{ implode(['day' => '13']) }}">13 Day</option>
         </select>
-        <select name="seasons" id="seasons">
-            <option value="" disabled selected hidden>Seasons</option>
-            <option value="Winter">Winter</option>
-            <option value="Spring">Spring</option>
-            <option value="Summer">Summer</option>
-            <option value="Autumn">Autumn</option>
-        </select>
-        <input type="number" placeholder="Min Price" >
-        <input type="number"placeholder="Max Price" >
+        
+        <input type="number" name="min_price" value="{{ $filters['min_price'] }}" placeholder="Min Price" >
+        <input type="number" name="max_price" value="{{ $filters['max_price'] }}" placeholder="Max Price" >
+        <button class="btn btn-success" type="submit"><i class="fa-solid fa-filter"></i> Filter</button>
     </div>
+    
     <div class="flexCards">
-        <div class="card">
-            <h3>Kazbegi</h3>
-            <hr />
-            <p><i class="fa-solid fa-location-dot" style="color: #ffd43b;"></i> Gergeti</p>
-            <p id="adDesc">245 want to travel here</p>
-            <img src="./assets/img/gergeti.jpg" alt="Card1 Image">
-        </div>
-        <div class="card">
-            <h3>Batumi</h3>
-            <hr />
-            <p><i class="fa-solid fa-location-dot" style="color: #ffd43b;"></i> Botanical garden</p>
-            <p id="adDesc">215 want to travel here</p>
-            <img src="./assets/img/botanic garden.jpg" alt="Card1 Image">
-        </div>
-        <div class="card">
-            <h3>Martvili</h3>
-            <hr />
-            <p><i class="fa-solid fa-location-dot" style="color: #ffd43b;"></i> Martvili canyon</p>
-            <p id="adDesc">195 want to travel here</p>
-            <img src="./assets/img/martvili canyon.jpg" alt="Card1 Image">
-        </div>
-        <div class="card">
-            <h3>Bakuriani</h3>
-            <hr />
-            <p><i class="fa-solid fa-location-dot" style="color: #ffd43b;"></i> Didveli</p>
-            <p id="adDesc">176 want to travel here</p>
-            <img src="./assets/img/bakuriani.jpg" alt="Card1 Image">
-        </div>
+            @foreach($tours->take(4) as $tr)
+            <div class="card">
+            <a class="readButton" href="{{ route('tour',['id' => $tr->id]) }}">Read more</a>
+                <h3>{{ $tr->tourname}}</h3>
+                <hr />
+                <p><i class="fa-solid fa-coins" style="color: #ffd43b;"></i> {{ $tr->tourprice}} $</p>
+                <p id="adDesc">{{ $tr->locationone}}, {{ $tr->locationtwo}}</p>
+                <img src="storage/tour/{{$tr->image1}}" alt="Card1 Image">
+            </div>
+            @endforeach
     </div>
+    
+    <div class="flexCards">
+            @foreach($tours->skip(4)->take(5) as $tr)
+            <div class="card">
+            <a class="readButton" href="{{ route('tour',['id' => $tr->id]) }}">Read more</a>
+                <h3>{{ $tr->tourname}}</h3>
+                <hr />
+                
+                <p><i class="fa-solid fa-coins" style="color: #ffd43b;"></i> {{ $tr->tourprice}} $</p>
+                <p id="adDesc">{{ $tr->locationone}}, {{ $tr->locationtwo}}</p>
+                <img src="storage/tour/{{$tr->image1}}" alt="Card1 Image">
+                
+            </div>
+            
+            @endforeach
+    </div>  
 </section>
 
 <section id="centeredSection">
@@ -155,6 +153,7 @@
             <img src="./assets/img/gomi.jpg" alt="Card1 Image">
         </div>
     </div>
+    
 </section>
 <footer>
     <div class="companyInfo">
@@ -170,8 +169,8 @@
         <ul>
             <a href="/"><li>Home</li></a>
             <a href="/tours"><li id="active">Tours</li></a>
-            <a href="/blog"><li>Blog</li></a>
-            <a href="/contact"><li>Contact</li></a>
+            <a href="./blog.html"><li>Blog</li></a>
+            <a href="./contact.html"><li>Contact</li></a>
         </ul>
     </nav>
     <div class="social">

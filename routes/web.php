@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'App\Http\Controllers\TourController@getHomePage');
-Route::get('/tours', 'App\Http\Controllers\TourController@getTourPage');
+Route::get('/tours', 'App\Http\Controllers\TourController@getTourPage')->name('tourshome.all');
 Route::get('/blog', 'App\Http\Controllers\TourController@getBlogPage');
 Route::get('/contact', 'App\Http\Controllers\TourController@getContactPage');
+Route::get('/atour/{id}', 'App\Http\Controllers\TourController@returnTourPage')->name('tour');
 
 Route::middleware('custom-auth')->get('/tour/all', 'App\Http\Controllers\TourController@viewAllTour')->name('tours.all');
 Route::middleware('custom-auth')->post('/tour/add', 'App\Http\Controllers\TourController@addNewTour')->name('tours.add');

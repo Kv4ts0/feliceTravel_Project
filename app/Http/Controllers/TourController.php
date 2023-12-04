@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Auth;
 class TourController extends Controller
 {
 
-    public function getTourPage(){
-        return view("tours");
-    }
     public function getContactPage(){
         return view("contact");
     }
@@ -181,5 +178,19 @@ class TourController extends Controller
             'max_price' => $request->max_price,
             'day' => $request->day,
         ]);
+    }
+    public function getTourPage(Request $request){
+        $tours = $this->getFilteredTours($request);
+        return view("tours")->with('tours', $tours)->with('filters', [
+            'id' => $request->id,
+            'tourname' => $request->tourname,
+            'min_price' => $request->min_price,
+            'max_price' => $request->max_price,
+            'day' => $request->day,
+        ]);
+    }
+    public function returnTourPage(Request $request, $id){
+        $tour = Tour::where('id', $id)->first();
+        return view('tour')->with('tour', $tour);
     }
 }

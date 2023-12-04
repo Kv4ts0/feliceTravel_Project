@@ -29,26 +29,26 @@
             </nav>
         </header>
         <div class="mainDesc">
-            <h1>Discover Georgia with exciting people</h1>
-            <p>Welcome to Felice Travel, where we turn travel dreams into reality. As a leading player in the tourism in...</p>
+            <h1>Experience Unforgettable Journeys with Our Team!</h1>
+            <p> Georgia is located on the crossroads of two continents Europe and Asia. Legendary Silk Road, layers of different cultures from great civilizations have been stored in this country, creating the unique and diverse identity. Following the Silk Road you get to know the mystery of the Ancient World. 
+             
+           </p>
+            <a href="/tours">
             <button>Start your tips <i class="fa-solid fa-arrow-right" style="color: rgb(31, 70, 118);"></i></button>
+            </a>
         </div>
         <div class="flexThree">
             <div class="stepsThree">
-                <h3><span>01</span> - Expert Guidance:</h3>
+                <h3><span>01</span> - What we offer:</h3>
                 <hr />
-                <p>Our team of exerienced travel professionals is dedicated to making your journey seamless</p>
+                <p>We offer full land service for VIP and business travel, tours for small and big groups, individual and family travel,  pilgrimage tours and tailor-made special programs.</p>
             </div>
             <div class="stepsThree">
-                <h3><span>02</span> - Expert Guidance:</h3>
+                <h3><span>02</span> - Why us?</h3>
                 <hr />
-                <p>Our team of exerienced travel professionals is dedicated to making your journey seamless</p>
+                <p> We organize incoming tours to Georgia, Georgia-Armenia and Georgia-Azerbaijan. Our services include guide and interpreter assistance, the arrangement of folklore shows and feast dinners, transfers and hotel reservations. </p>
             </div>
-            <div class="stepsThree">
-                <h3><span>03</span> - Expert Guidance:</h3>
-                <hr />
-                <p>Our team of exerienced travel professionals is dedicated to making your journey seamless</p>
-            </div>
+        
         </div>
     </section>
     </div>
@@ -56,8 +56,9 @@
         <h3>Where to go:</h3>
         <h1>Popular Destinations</h1>
         <div class="flexCards">
-            @foreach($tours as $tr)
+            @foreach($tours->take(4) as $tr)
             <div class="card">
+                <a class="readButton" href="{{ route('tour',['id' => $tr->id]) }}">Read more</a>
                 <h3>{{ $tr->tourname}}</h3>
                 <hr />
                 <p><i class="fa-solid fa-coins" style="color: #ffd43b;"></i> {{ $tr->tourprice}} $</p>
@@ -73,22 +74,27 @@
             <div class="first_card">
                 <div class="column">
                     <div>
-                        <h3><i class="fa-brands fa-servicestack" style="color: #ffffff;"></i> What do we offer</h3>
+                        <h3><i class="fa-brands fa-servicestack" style="color: #ffffff;"></i> Discover with Felice Travel: Exciting Journeys for Every Adventurer</h3>
                     <hr>
-                    <p>Embark on a voyage of discovery with Felice Travel. Whether you're a solo traveler, a couple seeking a romantic gateway, or a family looking for adventure, we have the perfect itinerary for you. Contact us today, and let the exploration begin!</p>
+                    <p>Discover new horizons with Felice Travel. Whether you're a solo adventurer, a couple seeking a romantic escape, or a family ready for excitement, we have the perfect itinerary for you. Contact us today, and let the exploration begin!</p>
                     </div>
                     
                     <div class="childFlex">
                         <div>
                             <h3><i class="fa-solid fa-car" style="color: #ffffff;"></i> Book a car</h3>
                             <hr />
-                            <p>Explore our diverse fleet or vehicles to find the perfect match for your journey. From sleek sedans for business trips to specious SUVs for family adventures, we have a vehicle to suit every occasion.</p>
+                            <p>Explore our diverse fleet of vehicles to find the perfect match for your journey. Whether you prefer sleek sedans for business trips, 
+                                spacious cars for family adventures, or comfortable micro-buses, our modern transportation options 
+                                are designed to complement your travels through the special landscapes and geographical wonders 
+                                of Georgia.</p>
                         </div>
     
                         <div>
                             <h3><i class="fa-solid fa-bell-concierge" style="color: #ffffff;"></i> Book a hotel</h3>
                             <hr />
-                            <p>Explore an extensive collection of hotels, ranging from boutique gems to luxury resots. We curate a diverse range of options to suit every taste and </p>
+                            <p>Our service extends to curated hotel accommodations, featuring partnerships with popular companies in Georgia such as 
+                                Tbilisi Inn, Kopala, and Just Inn. Prior to your stay, we attentively plan and organize your accommodation, 
+                                ensuring a seamless and enjoyable experience during your travels.</p>
                         </div>
                     </div>
                 </div>
@@ -107,19 +113,19 @@
                         <div>
                             <h3><i class="fa-solid fa-champagne-glasses" style="color: #ffffff;"></i> Corporative events</h3>
                             <hr />
-                            <p>Explore our diverse fleet or vehicles to find the perfect match for your journey. From sleek sedans for business trips to specious SUVs for family adventures, we have a vehicle to suit every occasion.</p>
+                            <p>Beyond leisure travel, our services cater to corporate events for both local and international clients in Georgia. This includes facilitating business meetings for local companies, as well as tailoring events to meet unique preferences. Whether it's a conference, team-building retreat, or any corporate gathering, we ensure precision in planning and execution to make your corporate events memorable and successful.</p>
                         </div>
     
                         <div>
                             <h3><i class="fa-solid fa-crown" style="color: #ffffff;"></i> Wedding events</h3>
                             <hr />
-                            <p>Explore an extensive collection of hotels, ranging from boutique gems to luxury resots. We curate a diverse range of options to suit every taste and </p>
+                            <p>Celebrate your special day with our personalized wedding event services. From small ceremonies to grand celebrations, we ensure every aspect of your wedding reflects your unique style and love story.</p>
                         </div>
                     </div>
                     <div>
                         <h3><i class="fa-solid fa-notes-medical" style="color: #ffffff;"></i> Medical Tourism</h3>
                         <hr>
-                        <p>Embark on a voyage of discovery with Felice Travel. Whether you're a solo traveler, a couple seeking a romantic gateway, or a family looking for adventure, we have the perfect itinerary for you. Contact us today, and let the exploration begin!</p>
+                        <p>Explore our medical tourism services, where we smoothly integrate tours with essential medical services during your trip. In Georgia, discover our Balneological Resorts, offering therapeutic experiences to enhance your well-being. Immerse yourself in the healing properties of these resorts, combining the benefits of travel with specialized medical care for a refreshing experience.</p>
                     </div>
                 </div>
         </div>
@@ -171,7 +177,7 @@
         </div>
         <nav>
             <ul>
-                <a href="/"><li id="active">Home</li></a>
+                <a id="active" href="/"><li>Home</li></a>
                 <a href="/tours"><li>Tours</li></a>
                 <a href="/blog"><li>Blog</li></a>
                 <a href="/contact"><li>Contact</li></a>

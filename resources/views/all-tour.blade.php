@@ -71,7 +71,7 @@
             <th>Actions</th>
         </thead>
         <tr>
-            <form action="{{ route('tours.add') }}" method="POST">
+            <form action="{{ route('tours.add') }}" method="POST" enctype="multipart/form-data">
             @csrf
                 <td></td>
                 <td><input type="text" name="tourname" placeholder="Tour name"></td>

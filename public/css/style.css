@@ -46,7 +46,7 @@ section > h1, section > h3{
     text-decoration: none;
 }
 .mainDesc{
-    width: 50rem;
+    width: 100%;
 }
 .cover_section > div h1{
     font-weight: 400;
@@ -68,6 +68,17 @@ section > h1, section > h3{
     border: none;
     cursor: pointer;
     border-radius: 1rem;
+    background-color: rgb(245, 219, 87);
+}
+.readButton{
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+    color: rgb(31, 70, 118);
+    padding: 10px;
+    font-weight: 700;
+    border: none;
     background-color: rgb(245, 219, 87);;
 }
 .flexThree{
@@ -87,6 +98,7 @@ section > h1, section > h3{
     background-color: white;
 }
 .flexCards{
+    margin-top: 70px;
     display: flex;
     gap: 5rem;
     justify-content: space-between;
@@ -160,7 +172,10 @@ section{
     margin:0;
 }
 .flexBox .first_card img{
-    height: 30rem;
+    border: 8px solid #fde89d;
+    border-radius: 18px;
+    object-fit: cover;
+    height: 100%;
     width: 30rem;
     display: inline-block;
 }
@@ -261,10 +276,23 @@ footer nav ul li a, footer .social li a{
 #desired{
     display: inline;
 }
-.searchInput{
+.searchInput{   
+    position: relative;
+    background-color: #fff0b9;
+    color:#004158;
+    bottom: 4rem;
     float: right;
     width: 20rem;
     padding: 10px;
+}
+.btn-success{
+    background-color: rgb(245, 219, 87);
+    color:#004158;
+    border: none;
+    padding: 10px;
+    border-radius: 13px;
+    width: 100px;
+    font-weight: 600;
 }
 .filter{
     margin-top: 3rem;
@@ -292,9 +320,15 @@ input{
 .flexSection{
     gap: 2rem;
 }
+.flexSection .mainDesc span{
+    color: #ffd43b;
+    font-weight: 300;
+}
 .flexSection img{
     margin-top: 2rem;
     width: 20rem;
+    height: 20rem;
+    object-fit: cover;
     border: 4px solid #ffd43b;
 }
 .blogFlex{
@@ -336,6 +370,23 @@ input{
     bottom: 0;
     right: 0;
 
+}
+.services{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+.serviceCard{
+    color:#004158;
+    border-radius: 18px;
+    font-size: 22px;
+    align-items: center;
+    text-align: center;
+    filter: drop-shadow(12px 12px 12px #979797);
+}
+.serviceCard i{
+    font-size: 30px;
 }
 .mainDesc div{
     display: flex;
@@ -408,6 +459,7 @@ input{
     }
     .flexBox .first_card img{
         width: 100%;
+        height: 20rem;
         object-fit: cover;
     }
   }
