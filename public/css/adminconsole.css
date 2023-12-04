@@ -19,6 +19,12 @@ table{
     border-spacing: 0px;
     min-width: max-content;
 }
+.blog-table{
+    border: 1px solid black;
+    border-collapse: separate;
+    border-spacing: 0px;
+    min-width: 100%;
+}
 th{
     position: sticky;
     padding: 10px;
@@ -58,6 +64,9 @@ th{
     box-shadow: 0px 0px 3px black;
     max-width: fit-content;
     max-height: fit-content;
+}
+.blog-wrapper{
+    max-width: 100%;
 }
 th, td{
     padding: 10px;

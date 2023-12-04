@@ -14,6 +14,12 @@ Route::middleware('custom-auth')->post('/tour/add', 'App\Http\Controllers\TourCo
 Route::middleware('custom-auth')->post('/tour/delete', 'App\Http\Controllers\TourController@deleteTour')->name('tours.delete');
 Route::middleware('custom-auth')->get('/tour/edit/{id}', 'App\Http\Controllers\TourController@editTour')->name('tours.edit');
 Route::middleware('custom-auth')->post('/tour/update/{id}', 'App\Http\Controllers\TourController@updateTour')->name('tour.update');
+
+Route::middleware('custom-auth')->get('/blog/all', 'App\Http\Controllers\TourController@viewAllBlog')->name('blogs.all');
+Route::middleware('custom-auth')->post('/blog/add', 'App\Http\Controllers\TourController@addNewBlog')->name('blogs.add');
+Route::middleware('custom-auth')->post('/blog/delete', 'App\Http\Controllers\TourController@deleteBlog')->name('blogs.delete');
+Route::middleware('custom-auth')->get('/blog/edit/{id}', 'App\Http\Controllers\TourController@editBlog')->name('blogs.edit');
+Route::middleware('custom-auth')->post('/blog/update/{id}', 'App\Http\Controllers\TourController@updateBlog')->name('blog.update');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
