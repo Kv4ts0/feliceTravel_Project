@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'App\Http\Controllers\TourController@getHomePage');
 Route::get('/tours', 'App\Http\Controllers\TourController@getTourPage')->name('tourshome.all');
-Route::get('/blog', 'App\Http\Controllers\TourController@getBlogPage');
+Route::get('/blog', 'App\Http\Controllers\TourController@returnBlogPage');
 Route::get('/contact', 'App\Http\Controllers\TourController@getContactPage');
 Route::get('/atour/{id}', 'App\Http\Controllers\TourController@returnTourPage')->name('tour');
 

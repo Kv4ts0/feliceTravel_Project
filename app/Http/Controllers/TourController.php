@@ -13,9 +13,7 @@ class TourController extends Controller
     public function getContactPage(){
         return view("contact");
     }
-    public function getBlogPage(){
-        return view("blog");
-    }
+
     public function getFilteredTours(Request $request){
         $tours = Tour::orderBy('created_at', 'DESC');
         if($request->id != null){
@@ -244,5 +242,13 @@ class TourController extends Controller
     public function returnTourPage(Request $request, $id){
         $tour = Tour::where('id', $id)->first();
         return view('tour')->with('tour', $tour);
+    }
+    public function returnBlogPage(Request $request){
+        $blogs = $this->getFilteredBlogs($request);
+        return view("blog")->with('blogs', $blogs)->with('filters', [
+            'id' => $request->id,
+            'blogname' => $request->blogname,
+            'blogdescription' => $request->blogdescription,
+        ]);
     }
 }

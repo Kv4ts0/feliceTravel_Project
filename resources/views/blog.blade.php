@@ -43,37 +43,17 @@
         <h3>Follow us and see news about Felice Travel:</h3>
         <h1>Our Blog Page</h1>
         <div class="blogFlex">
+            @foreach($blogs as $bl)
             <div class="blogCard">
                 <div>
-                    <p><span>Date: </span> 28/11/2023</p>
+                    <p><span>Date: </span> {{$bl->created_at}}</p>
                 </div>
-                <img src="./assets/img/blog1.jpg" alt="Blog image #1">
-                <h3>Join Us on the Road Less Traveled</h3>
-                <p>Ready to embark on an unforgettable adventure? 
-                    Choose one of our featured routes or design your 
-                    custom journey with [Your Company Name]. The world is waiting to be explored, and we can't wait to be a part of your travel story.</p>
-                <p id="author"><span>Author: </span> Nikusha Kvatsabaia</p>
+                <img src="storage/blog/{{$bl->blogimage}}" alt="Blog image #1">
+                <h3>{{$bl->blogname}}</h3>
+                <p>{{$bl->blogdescription}}</p>
             </div>
             <hr>
-            <div class="blogCard">
-                <div>
-                    <p><span>Date: </span> 22/11/2023</p>
-                </div>
-                <img src="./assets/img/blog2.jpg" alt="Blog image #1">
-                <h3>Custom Routes: Your Journey, Your Way</h3>
-                <p>At [Your Company Name], we understand that every traveler is unique. That's why we offer custom route options, allowing you to tailor your adventure to match your interests, preferences, and travel style. Work with our expert travel planners to create a personalized itinerary that reflects your dream journey.</p>
-                <p id="author"><span>Author: </span> Nikusha Kvatsabaia</p>
-            </div>
-            <hr>
-            <div class="blogCard">
-                <div>
-                    <p><span>Date: </span> 02/11/2023</p>
-                </div>
-                <img src="./assets/img/blog1.jpg" alt="Blog image #1">
-                <h3>Volkswagen Cars</h3>
-                <p>Cruise in style with our fleet of Volkswagen sedans. These sleek and sophisticated vehicles provide a luxurious ride for solo travelers or couples seeking a touch of elegance.</p>
-                <p id="author"><span>Author: </span> Nikusha Kvatsabaia</p>
-            </div>
+            @endforeach
         </div>
     </section>
     <footer>

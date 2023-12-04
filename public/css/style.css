@@ -359,17 +359,12 @@ input{
     margin: 0;
 }
 .blogFlex .blogCard img{
+    object-fit: cover;
     border-radius: 18px;
     margin-right: 3rem;
     width: 20rem;
     height: 20rem;
     float: left;
-}
-.blogFlex .blogCard #author{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
 }
 .services{
     display: flex;

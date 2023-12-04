@@ -10,12 +10,12 @@
     <div class="heading">
         <h1>Edit Blogs</h1>
     </div>
-    <div class="outer-wrapper">
-    <div class="table-wrapper">
+    <div class="outer-wrapper blog-wrapper">
+    <div class="table-wrapper blog-wrapper">
     <form action="{{ route('blog.update',['id' => $blog->id]) }}" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="blog_id" value="{{$blog->id}}" />
     @csrf
-    <table>
+    <table class="blog-table">
         <thead>
             <th>Date Added</th>
             <th>Name</th>

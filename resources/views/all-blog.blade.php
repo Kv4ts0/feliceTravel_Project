@@ -23,7 +23,7 @@
     </div>
     
     <div class="outer-wrapper blog-wrapper">
-    <div class="table-wrapper .blog-wrapper">
+    <div class="table-wrapper blog-wrapper">
     <form action="/blog/add" method="POST" enctype="multipart/form-data">
     @csrf
     <table class="blog-table">
