@@ -30,12 +30,13 @@
         </header>
         <div class="flexBox flexSection">
             <div class="mainDesc">
-                <h1>Exciting News: Elevating Your Travel Experience with 
-                    Our New Fleet of Luxury Vehicles</h1>
-                <p>At [Your Company Name], we are committed to providing you with unparalleled travel experiences, and we're thrilled to announce a significant enhancement to our services. We have just acquired a fleet of the world's best cars, top-of-the-line minivans, and stylish sedans from Volkswagen and other leading automotive brands.</p>
-                <button>Start your tips <i class="fa-solid fa-arrow-right" style="color: rgb(31, 70, 118);"></i></button>
+                <h1>Discover Felice Travel's Chronicles</h1>
+                <p>Welcome to our blog, your go-to destination for a comprehensive look into our company's journey and the latest news. Dive into a wealth of information, from our company's origins and values to the exciting developments shaping our future. Stay informed about our latest projects, innovations, and industry insights. Explore the heart of our organization and discover the stories that define us.</p>
+                <a href="/tours">
+                    <button>Start your tips <i class="fa-solid fa-arrow-right" style="color: rgb(31, 70, 118);"></i></button>
+                </a>
             </div>
-            <img src="./assets/img/gomi.jpg" alt="">
+            <img src="./assets/img/news.jpg" alt="">
         </div>
     </section>
     </div>    

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/1ffcb73b4a.js" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Tour</title>
 </head>
 <body>
@@ -45,23 +45,119 @@
                 <h3>Transfer</h3>
             </div>
             <div class="serviceCard">
-                <i class="fa-solid fa-bus"></i>
+                <i class="fa-solid fa-chalkboard-user"></i>
                 <h3>Guide service</h3>
             </div>
             <div class="serviceCard">
-                <i class="fa-solid fa-bus"></i>
+                <i class="fa-solid fa-hotel"></i>
                 <h3>Hotel</h3>
             </div>
             <div class="serviceCard">
-                <i class="fa-solid fa-bus"></i>
+                <i class="fa-solid fa-notes-medical"></i>
                 <h3>Insurance</h3>
             </div>
         </div>
-    </section>   
+    </section> 
 
-
-
-
+    
+    <div class="parent_section tourFlex">
+        <section class="grid_tour">
+            
+            <div>
+                <img src="/storage/tour/{{$tour->image2}}" alt="">
+            </div>
+            <div>
+                <img src="/storage/tour/{{$tour->image3}}" alt="">
+            </div>
+            <div>
+                <img src="/storage/tour/{{$tour->image4}}" alt="">
+            </div>
+            <div>
+                <img src="/storage/tour/{{$tour->image5}}" alt="">
+            </div>
+            
+        </section> 
+    </div>
+    <section>
+        <hr>
+        <div class="tourDayCard horizontal-rules">
+            <div class="tourCard hide-if-na">
+                <h1>Day 1</h1>
+                <h3>Location: {{$tour->locationone}}</h3>
+                <pre>{{$tour->dayonedesc}}</pre>
+            </div>
+            <div class="tourCard hide-if-na">
+                <h1>Day 2</h1>
+                <h3>Location: {{$tour->locationtwo}}</h3>
+                <pre>{{$tour->daytwodesc}}</pre>
+            </div>
+            <div class="tourCard hide-if-na">
+                <h1>Day 3</h1>
+                <h3>Location: {{$tour->locationthree}}</h3>
+                <pre>{{$tour->daythreedesc}}</pre>
+            </div>
+        </div>
+        
+        <div class="tourDayCard">
+            <div class="tourCard hide-if-na">
+                <h1>Day 4</h1>
+                <h3>Location: {{$tour->locationfour}}</h3>
+                <pre>{{$tour->dayfourdesc}}</pre>
+            </div>
+            <div class="tourCard hide-if-na">
+                <h1>Day 5</h1>
+                <h3>Location: {{$tour->locationfive}}</h3>
+                <pre>{{$tour->dayfivedesc}}</pre>
+            </div>
+            <div class="tourCard hide-if-na">
+                <h1>Day 6</h1>
+                <h3>Location: {{$tour->locationsix}}</h3>
+                <pre>{{$tour->daysixdesc}}</pre>
+            </div>
+        </div>
+        <div class="tourDayCard">
+            <div class="tourCard hide-if-na">
+                <h1>Day 7</h1>
+                <h3>Location: {{$tour->locationseven}}</h3>
+                <pre>{{$tour->daysevendesc}}</pre>
+            </div>
+            <div class="tourCard hide-if-na">
+                <h1>Day 8</h1>
+                <h3>Location: {{$tour->locationeight}}</h3>
+                <pre>{{$tour->dayeightdesc}}</pre>
+            </div>
+            <div class="tourCard hide-if-na">
+                <h1>Day 9</h1>
+                <h3>Location: {{$tour->locationeleven}}</h3>
+                <pre>{{$tour->dayelevendesc}}</pre>
+            </div>
+        </div>
+        <div class="tourDayCard">
+            <div class="tourCard hide-if-na">
+                <h1>Day 10</h1>
+                <h3>Location: {{$tour->locationten}}</h3>
+                <pre>{{$tour->daytendesc}}</pre>
+            </div>
+            <div class="tourCard hide-if-na">
+                <h1>Day 11</h1>
+                <h3>Location: {{$tour->locationeleven}}</h3>
+                <pre>{{$tour->dayelevendesc}}</pre>
+            </div>
+            <div class="tourCard hide-if-na">
+                <h1>Day 12</h1>
+                <h3>Location: {{$tour->locationtwelve}}</h3>
+                <pre>{{$tour->daytwelvedesc}}</pre>
+            </div>
+        </div>
+        <div class="tourDayCard">
+            <div class="tourCard hide-if-na">
+                <h1>Day 13</h1>
+                <h3>Location: {{$tour->locationthirteen}}</h3>
+                <pre>{{$tour->daythirteendesc}}</pre>
+            </div>
+        </div>
+    </section>
+    
 <footer>
         <div class="companyInfo">
             <a href="/">
@@ -87,5 +183,11 @@
             <li><a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></li>
         </div>
     </footer>
+    <script>
+        $(document).ready(function() {
+            $('.hide-if-na:contains("N/A")').hide();
+            $('.horizontal-rules hr').hide();
+        });
+    </script>
 </body>
 
