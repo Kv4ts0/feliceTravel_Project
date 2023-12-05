@@ -54,6 +54,12 @@ th{
 }
 .btn-primary{
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
     background-color: rgb(218, 187, 54);
 }
 .outer-wrapper{

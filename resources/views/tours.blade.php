@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,500;0,600;0,700;1,400&family=Libre+Baskerville&family=Poppins&family=Work+Sans:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.svg">
     <link rel="stylesheet" href="./css/style.css">
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/1ffcb73b4a.js" crossorigin="anonymous"></script>
