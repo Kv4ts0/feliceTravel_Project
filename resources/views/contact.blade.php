@@ -21,11 +21,13 @@
                 <a href="/">
                     <img width="70px" src="./assets/img/logo.svg" alt="Logo image">
                 </a>
-                <ul>
+                <div class="openMenu"><i class="fa fa-bars"></i></div>
+                <ul class="mainMenu">
                     <li><a href="/">Home</a></li>
                     <li><a href="/tours">Tours</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a id="active" href="/contact">Contact</a></li>
+                    <div class="closeMenu"><i class="fa fa-times"></i>
                 </ul>
             </nav>
         </header>
@@ -89,4 +91,5 @@
             <li><a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></li>
         </div>
     </footer>
+    <script src="./js/index.js"></script>
 </body>

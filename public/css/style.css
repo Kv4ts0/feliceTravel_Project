@@ -322,6 +322,19 @@ footer nav ul li a, footer .social li a{
     width: 20rem;
     padding: 10px;
 }
+.openMenu{
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+nav .closeMenu, .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
 .btn-success{
     background-color: rgb(245, 219, 87);
     color:#004158;
@@ -493,5 +506,161 @@ input{
         width: 100%;
         height: 20rem;
         object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 960px){
+    .contactForm{
+        flex-direction: column;
+        align-items: center;
+    }
+    .flexSection{
+        flex-direction: column;
+        align-items: center;
+    }
+    .flexSection img{
+        width: 100%;
+    }
+    .grid_tour{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 20rem);
+    }
+    .grid_tour div{
+        width: 100%;
+    }
+    .filter{
+        align-items: center;
+        flex-direction: column;
+    }
+    .searchInput{
+        display: none;
+    }
+    .filter input, .filter select{
+        width: 100%;
+    }
+    .filter input{
+        padding: 10px;
+    }
+    .cover_section header nav ul{
+        position: absolute;
+        margin-top: 3rem;
+    }
+    nav .mainMenu{
+        height: 25rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        gap: 3rem;
+        flex-direction: column;
+        background-color:#fde89d;
+        transform: top 1s ease;
+        display: none;
+    }
+    header > a img{
+        position: absolute;
+        right: 2rem;
+        width: 10rem;
+    }
+    nav .mainMenu .closeMenu{
+        display: block;
+        top: 20px;
+        right: 20px;
+    }
+    .galleryTable{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .galleryTable .b{
+        grid-column: span 1;
+    }
+    .openMenu{
+        left: 7rem;
+        bottom: 6rem;
+        position: relative;
+        float: right;
+        color: white;
+        display: inline-block;
+    }
+    .cover_section header nav ul li a{
+        top: 3rem;
+        color: #004158;
+        position: relative;;
+    }
+    #active{
+        color: rgb(224, 195, 46);
+    }
+    .closeMenu{
+        color: #004158;
+        position: absolute;
+    }
+  }
+  @media screen and (max-width: 750px){
+    .contactForm .map{
+        width: 100%;
+        height: 20rem;
+    }
+    .tourDayCard{
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .childFlex{
+        flex-direction: column;
+    }        
+    .flexThree{
+        flex-direction: column;
+    }
+    .flexCards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .galleryTable{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 20rem);
+    }
+    footer{
+        gap: 4rem;
+        flex-direction: column;
+    }
+    .social p{
+        margin-bottom: 3rem;
+    }
+    .closeMenu{
+        bottom: 1rem;
+    }
+    header nav a img{
+        width: 135px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .contactForm .fillForm{
+        width: 100%;
+    }
+    .tourCard{
+        margin-right: 0;
+    }
+    .services{
+        flex-direction: column;
+        align-items: center;
+    }
+    .galleryTable .card hr{
+        display: none;
+    }
+    .parent_section{
+        padding: 0;
+    }
+    .openMenu{
+        left: 3rem;
+        bottom: 6rem;
+        position: relative;
+        color: white;
+        display: inline-block;
+    }
+    .flexBox hr{
+        width: 10rem;
+    }
+    .flexCards .card{
+        width: 15rem;
     }
   }

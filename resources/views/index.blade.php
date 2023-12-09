@@ -10,7 +10,6 @@
     <link rel="icon" type="image/x-icon" href="./assets/img/logo.svg">
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/1ffcb73b4a.js" crossorigin="anonymous"></script>
-
     <title>Home</title>
 </head>
 <body>
@@ -18,14 +17,17 @@
         <section class="cover_section">
         <header>
             <nav>
+                
                 <a href="/">
                     <img width="70px" src="./assets/img/logo.svg" alt="Logo image">
                 </a>
-                <ul>
+                <div class="openMenu"><i class="fa fa-bars"></i></div>
+                <ul class="mainMenu">
                     <li><a id="active" href="/">Home</a></li>
                     <li><a href="/tours">Tours</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/contact">Contact</a></li>
+                    <div class="closeMenu"><i class="fa fa-times"></i>
                 </ul>
             </nav>
         </header>
@@ -191,5 +193,6 @@
             <li><a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></li>
         </div>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 </html>
