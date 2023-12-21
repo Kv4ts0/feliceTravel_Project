@@ -134,37 +134,49 @@
         </div>
     </section>
     <section id="centeredSection">
-        <h1>Our Gallery</h1>
+        <h1>Hotels</h1>
         <div class="galleryTable">
             <div class="card">
-                <h3>Mtatsminda</h3>
+                <h3>Citrus</h3>
                 <hr />
-                <p>130 pictures of Mtatsminda</p>
-                <img src="./assets/img/mtatsminda.jpg" alt="Card1 Image">
+                <p>Click the card for more details...</p>
+                <img src="./assets/img/citrus.jpg" alt="Card1 Image">
+            </div>
+            <div class="card">
+                <h3>Rooms Kazbegi</h3>
+                <hr />
+                <p>Click the card for more details...</p>
+                <img src="./assets/img/roomsk.jpg" alt="Card1 Image">
+            </div>
+            <div class="card">
+                <h3>Tbilisi Inn</h3>
+                <hr />
+                <p>Click the card for more details...</p>
+                <img src="./assets/img/tbilisiinn.jpg" alt="Card1 Image">
+            </div>
+            <div class="card">
+                <h3>Sno</h3>
+                <hr />
+                <p>Click the card for more details...</p>
+                <img src="./assets/img/sno.jpg" alt="Card1 Image">
+            </div>
+            <div class="card">
+                <h3>Biography</h3>
+                <hr />
+                <p>Click the card for more details...</p>
+                <img src="./assets/img/biography.jpg" alt="Card1 Image">
+            </div>
+            <div class="card">
+                <h3>Epigraph</h3>
+                <hr />
+                <p>Click the card for more details...</p>
+                <img src="./assets/img/epigraphi.jpg" alt="Card1 Image">
             </div>
             <div class="card b">
-                <h3>Bakhmaro</h3>
+                <h3>Sole Palace</h3>
                 <hr />
-                <p>90 pictures of Bakhmaro</p>
-                <img src="./assets/img/bakhmaro.jpg" alt="Card1 Image">
-            </div>
-            <div class="card">
-                <h3>Mestia</h3>
-                <hr />
-                <p>67 pictures of Mestia</p>
-                <img src="./assets/img/mestia.jpg" alt="Card1 Image">
-            </div>
-            <div class="card">
-                <h3>Old Tbilisi</h3>
-                <hr />
-                <p>56 pictures of Old Tbilisi</p>
-                <img src="./assets/img/tbilisi.jpg" alt="Card1 Image">
-            </div>
-            <div class="card">
-                <h3>Gomis mta</h3>
-                <hr />
-                <p>33 pictures of Gomis mta</p>
-                <img src="./assets/img/gomi.jpg" alt="Card1 Image">
+                <p>Click the card for more details...</p>
+                <img src="./assets/img/sole.jpg" alt="Card1 Image">
             </div>
         </div>
     </section>

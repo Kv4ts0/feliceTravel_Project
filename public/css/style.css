@@ -238,7 +238,7 @@ section{
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, 20rem);
+    grid-template-rows: repeat(3, 20rem);
 }
 .galleryTable h3, .galleryTable p, .galleryTable hr{
     left: 1rem;
@@ -268,7 +268,7 @@ section{
     width: 5rem;
 }
 .galleryTable .b{
-    grid-column: span 2;
+    grid-column: span 3;
 }
 .galleryTable .card img{
     z-index: -1;
